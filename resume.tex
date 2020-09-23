@@ -1,0 +1,178 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,11pt]{article}
+
+%***************************************************************************************************%
+% Variables Section %
+%***************************************************************************************************%
+
+%% Header Information
+% name
+\def \name {Andrew Quinn Curriculum Vitae}
+% address
+\def \officeaddr {4929 CSE,2260 Hayward St.,Ann Arbor, MI 48105}
+\def \curraddr {2821 Beacon Hill, Ann Arbor MI, 48104}
+% phone number
+\def \phone {630.453.1899}
+% email
+\def \email {arquinn@umich.edu}
+\def \website {web.eecs.umich.edu/$\sim$arquinn}
+
+
+%***************************************************************************************************%
+% Header Section %
+%***************************************************************************************************%
+% define packages used
+\usepackage[empty]{fullpage}	
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[margin=1in]{geometry}
+\usepackage{calc}
+
+\definecolor{mygrey}{gray}{.85}
+\definecolor{mygreylink}{gray}{.30}
+%\textheight=9.0in
+\raggedbottom
+\raggedright
+
+\newlength \firstcol 
+\setlength{\firstcol}{\textwidth-6cm}%
+
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1\vphantom{p\^{E}}}}\end{minipage}}}}
+
+\newcommand{\tab}{\hspace*{1em}}    
+\newcommand*{\tabbox}[2][t]{%
+    \vspace{0pt}\parbox[#1][3.7\baselineskip]{1cm}{\strut#2\strut}}    
+    
+\newcommand{\reitem}[2]{
+\begin{minipage}[t]{\firstcol}
+#2
+\end{minipage}
+\null\hfill
+\begin{minipage}[t]{4cm}
+\flushright
+#1
+\end{minipage}
+}
+
+
+
+
+\newcommand{\heading}[4]{
+\vspace{#1}
+\begin{minipage}{8cm}
+\flushleft
+\textbf{#2}
+\end{minipage}
+\null\hfill
+\begin{minipage}{7cm}
+\flushright 
+\textbf{#3}
+\end{minipage}
+\vspace{#4}
+}
+
+% Re-assign the itemize command... to touch it up a bit. 
+\let\olditemize\itemize
+\renewcommand{\itemize}{
+  \olditemize
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}
+\setlist[itemize]{leftmargin=*}
+\newcommand{\blkSquare}{\ \rule[.2ex]{1ex}{1ex}\ }
+ 
+% Declares the Title Command
+\newcommand{\myTitle}{
+\textbf{{\LARGE \name}} \\
+{\footnotesize \officeaddr \blkSquare \phone \\ \email \blkSquare \website} \\
+\vspace{0.1in}}
+ 
+ 
+%***************************************************************************************************%
+% Header Section %
+%***************************************************************************************************%
+\begin{document}
+
+\myTitle % calls the title
+
+%***************************************************************************************************%
+% Education Section %
+%***************************************************************************************************%
+\resheading{Education}
+\begin{itemize}
+	\item[] \heading{0em}{University of Michigan}{Ann Arbor, MI}{.25em}
+	\item[] Ph.D. Candidate, GPA: 4.0
+	\item[] \heading{0em}{Denison University}{Granville,
+          OH}{.25em}
+	\item[]  Class of 2014, B.S. in Computer Science \& B.A. in Mathematics, Summa Cum Laude
+\end{itemize}
+
+%**************************************************************************************************
+% Publications
+%***************************************************************************************************
+\resheading{Publications}
+\begin{itemize}
+\item[] Andrew Quinn, Michael Cafarella and Jason Flinn, ``Sledgehammer: Cluster-fueled Debugging'' to appear in \emph{Proceedings of the 2018 USENIX Symposium on Operating Systems Design and Implementation (OSDI)}, Carlsbad, CA, October 2018.
+\item[] Andrew Quinn, David Devecsery, Peter M. Chen and Jason Flinn, ``JetStream: Cluster-scale Parallelization of Information Flow Queries'' in \emph{Proceedings of the 2016 USENIX Symposium on Operating Systems Design and Implementation (OSDI)}, Savannah, GA, November 2016.
+\end{itemize}
+
+%**************************************************************************************************
+% Presentations
+%***************************************************************************************************
+\resheading{Invited Presentations}
+\begin{itemize}
+%\item[] \heading{0em}{Denison University }{Granville, OH}{.25em}
+\item[] \reitem{Apr 2014}{\emph{Power Management for Malleable Job Scheduling}. Department of Math and Computer Science FaST Talk, Denison University, Granville, OH}
+\end{itemize}
+
+%***************************************************************************************************%
+% Honors Section %
+%***************************************************************************************************%
+\resheading{Fellowships \& Awards}
+\begin{itemize}
+        \item[] \reitem{2017}{Microsoft Research Fellowship}
+        \item[] \reitem{2017}{National Science Fellowship}
+	\item[] \reitem{2014}{John L. Gilpatrick Mathematics Award, Denison University}
+	\item[] \reitem{2014}{Phi Betta Kappa Inductee, Denison University}
+	\item[] \reitem{2014}{Ted Barclay Top 5 Student Athlete, Denison University}
+	\item[] \reitem{2013}{Epsilon Pi Upsilon Inductee, Denison University}
+	\item[] \reitem{2013}{Pi Mu Epsilon Inductee, Denison University}
+\end{itemize}
+
+%**************************************************************************************************
+% Research Experience 
+%***************************************************************************************************
+\resheading{Research Experience}
+\begin{itemize}
+\item[] \heading{0em}{University of Michigan}{Ann Arbor, MI}{.25em}
+\item[] \reitem{Sep 2015 - Present}{Graduate Student advised by Dr. Jason Flinn}
+\item[] \heading{.25em}{Denison University}{Granville, OH}{.25em}
+\item[] \reitem{Aug 2013 - May 2014}{Research Assistant under Dr. Jessen Havill}
+\item[] \reitem{May 2012 - Aug 2012}{Summer Research Assistant under Dr. Jessen Havill}
+\end{itemize}
+
+%***************************************************************************************************
+% Experience Section %
+%***************************************************************************************************%
+\resheading{Other Experience}
+\begin{itemize}
+\item[]	\heading{0em}{IBM}{Dublin, OH}{.25em}
+\item[] \reitem{June 2014 - Aug 2015}{Software Development Engineer, IBM, Dublin, OH}
+\item[] \reitem{May 2013 - Aug 2013}{Software Development Engineering Intern, IBM, Dublin, OH}
+\item[]	\heading{.5em}{Denison University}{Granville, OH}{.25em}
+\item[] \reitem{Jan 2012 - May 2014}{Computer Science Tutor, Denison University, Granville, OH}
+\end{itemize}
+
+\resheading{Service}
+\begin{itemize}
+%\item[] \heading{0em}{Georgian Heights Elementary}{Columbus, OH}{.25em}
+\item[] \reitem{Aug 2014 - Aug 2015}{Techie Club, Georgian Heights Elementary, Columbus, OH}
+%\item[] \heading{0em}{Newark Elementary Schools}{Newark, OH}{.25em}
+\item[] \reitem{Sep 2012 - Dec 2013}{A Call to College, Newark Elementary Schools, Newark, OH}
+\end{itemize}
+
+\end{document}
+
