@@ -11,7 +11,7 @@
 \def \name {Andrew Quinn}
 
 % address
-\def \addr {4929 CSE,2260 Hayward St.,Ann Arbor, MI 48105}
+\def \addr {4929 CSE\\2260 Hayward St.\\Ann Arbor, MI 48105}
 % phone number
 \def \phone {1.630.453.1899}
 % email
@@ -95,10 +95,10 @@
 
 
 \newcommand{\quadItem}[4]{\reitem{\emph{#1}\\#2}{\textbf{#3}\\#4}}
+\newcommand{\award}[4]{\reitem{#1\\#2}{\textbf{#3}\\#4}}
 %\newcommand{\quadItem}[4]{#1\\#2\\#3\\#4}
 %\newcommand{\quadItem}[2]{\reitem{#1}{\tab#2}}
 
-\newcommand{\award}[2]{\reitem{#1}{\textbf{#2}}}
 \newcommand{\paper}[3]{#1\\#2 #3}
 \newcommand{\desc}[1]{\hspace*{.5em}#1}
 
@@ -117,8 +117,20 @@
   \textbf{{\LARGE \name}} \\
   Curriculum Vitae
 \end{center}
-  Address: \addr\\
-  Phone: \phone \blkSquare  Email: \email \blkSquare Web: \website\\
+
+%Address: \addr\\
+\begin{tabular}{l}
+  \addr
+\end{tabular}
+\hfill
+\begin{tabular}{r}
+  Phone: \phone\\
+  Email: \email\\
+  Web: \website
+\end{tabular}
+
+
+
 %\vspace{0.1in}}
 
 %***************************************************************************************************%
@@ -159,14 +171,22 @@ Graduate Research Fellow.
 %***************************************************************************************************%
 \section{Fellowships and Awards}
 %\begin{comment}
-\award{2017}{Microsoft Research Fellowship}\\
-\desc{Two year fellowship awarded to nine early-career Ph.D. students}\\
-\award{2017}{National Science Foundation Graduate Student Research Fellowship}\\
-\desc{Three year fellowship awarded for ...}\\
-\award{Apr 2014}{John L. Gilpatrick Mathematics Award, Denison University}\\
-\desc{Awarded to the most outstanding senior major in the Math and CS department}
-\award{Apr 2014}{Ted Barclay Top Five Student Athlete, Denison University}\\
-\desc{Awarded to the top five student athletes at Denison based on GPA.}
+
+\award{2017}{}{Microsoft Research Fellowship}{Two year fellowship awarded to nine early-career Ph.D. students}
+
+\award{2017}{}{National Science Foundation Graduate Student Research Fellowship}{Three year fellowship awarded to Ph.D. students}
+
+\award{2014}{}{John L. Gilpatrick Mathematics Award, Denison University}{Awarded to the most outstanding senior major in the Math and CS department}
+
+\award{2014}{}{Ted Barclay Top Five Student Athlete, Denison University}{Awarded to the top five student athletes at Denison based on GPA.}
+
+%\award{2017}{Microsoft Research Fellowship}\\
+%\desc{Two year fellowship awarded to nine early-career Ph.D. students}\\
+%\award{2017}{National Science Foundation Graduate Student Research Fellowship}\\
+%\desc{Three year fellowship awarded }\\
+%\award{2014}
+%\award{2014}{Ted Barclay Top Five Student Athlete, Denison University}\\
+%\desc{Awarded to the top five student athletes at Denison based on GPA.}
 %\end{comment}
 
 %**************************************************************************************************
@@ -213,19 +233,19 @@ Graduate Research Fellow.
 %***************************************************************************************************
 \section{Presentations}
 %\begin{comment}
-\presentation{You can't debug what you can't see: Expanding
+\quadItem{May 2019}{}{You can't debug what you can't see: Expanding
   Observability with the OmniTable}{Workshop on Hot Topics in
-  Operating Systems (HotOS)}{May 2019}
+  Operating Systems (HotOS)}
 
-\presentation{Sledgehammer: Cluster-fueled Debugging}{USENIX Symposium
-  on Operating Systems Design and Implementation (OSDI)}{Oct 2018}
+\quadItem{Oct 2018}{}{Sledgehammer: Cluster-fueled Debugging}{USENIX Symposium
+  on Operating Systems Design and Implementation (OSDI)}
 
-\presentation{JetStream: Cluster-Scale Parallelization of Information
+\quadItem{Nov 2016}{}{JetStream: Cluster-Scale Parallelization of Information
   Flow Queries}{USENIX Symposium on Operating Systems Design and
-  Implementation (OSDI)}{Nov 2016}
+  Implementation (OSDI)}
 
-\presentation{Power Management for Malleable Job Scheduling}{Denison
-  University department of Math and Computer Science FaST talk}{Apr 2014}
+\quadItem{Apr 2014}{}{Power Management for Malleable Job Scheduling}{Denison
+  University department of Math and Computer Science FaST talk}
 %\end{comment}
 
 %**************************************************************************************************
@@ -233,11 +253,9 @@ Graduate Research Fellow.
 %***************************************************************************************************
 \section{Teaching Experience}
 %\begin{comment}
-\heading{0em}{University of Michigan}{Ann Arbor, MI}{0em}
-\reitem{May 2019 - Jun 2019}{Graduate Student Instructor for Data Structures and Algorithms}
+\quadItem{Ann Arbor, MI}{May 2019 - Jun 2019}{University of Michigan}{Graduate Student Instructor for Data Structures and Algorithms}
 
-\heading{0em}{Denison University}{Granville, OH}{0em}
-\reitem{Jan 2012 - May 2014}{Computer Science Tutor for Introduction to Computer Science}
+\quadItem{Granville, OH}{Jan 2012 - May 2014}{Denison University}{Computer Science Tutor for Introduction to Computer Science}
 %\end{comment}
 
 %**************************************************************************************************
@@ -277,7 +295,9 @@ Graduate Research Fellow.
 \section{Outreach Activities}
 %\begin{comment}
 \reitem{Aug 2019}{Discover Engineering, University of Michigan, Ann Arbor, MI}
+
 \reitem{Aug 2014 - Aug 2015}{Techie Club, Georgian Heights Elementary, Columbus, OH}
+
 \reitem{Sep 2012 - Dec 2013}{A Call to College, Newark Elementary Schools, Newark, OH}
 %\end{comment}
 \end{document}
