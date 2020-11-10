@@ -1,0 +1,58 @@
+
+%packaged imports for this style
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[explicit]{titlesec}
+\usepackage[margin=1in]{geometry}
+\usepackage{calc}
+\usepackage{xspace}
+
+
+%create a subtitle command for yerself
+\makeatletter
+\def\@maketitle{%
+%  \newpage
+%  \null
+  %\vskip 2em%
+  \begin{center}%
+    {\huge \lowercase{\textsc{\@title}}}\vskip 3pt
+    {\Large \lowercase{\textsc{\@author}}}
+       %\vskip 1.5em%
+  \end{center}%
+  \par
+  }
+\makeatother
+
+\newcommand{\tab}{\hspace*{1em}}
+\newcommand{\blkSquare}{\ \rule[.2ex]{1ex}{1ex}\ }
+
+\newenvironment{smenumerate}%
+               {\begin{enumerate}[
+                     leftmargin=*,
+                     itemsep=2pt,
+                     topsep=0pt,
+                     parsep=0pt,
+                     label=\arabic*.]}
+               {\end{enumerate}}
+
+
+
+%setup some standard lengths
+\hypersetup{
+  colorlinks=true
+  }
+\raggedbottom
+
+%\setlength{\parskip}{0pt}
+
+\titleformat{\section}{\Large\scshape\lowercase}{}{0pt}{#1}[{\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{3pt}{3pt}
+
+\titleformat{\subsection}{\large\scshape\lowercase}{}{0pt}{#1}
+\titlespacing*{\subsection}{0pt}{0pt}{0pt}
+
+%need to fix this yet.
+\titleformat{\paragraph}{\scshape\lowercase}{}{0pt}{#1}
+

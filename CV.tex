@@ -6,10 +6,55 @@
 % Variables Section %
 %***************************************************************************************************%
 
+%***************************************************************************************************%
+% Header Section %
+%***************************************************************************************************%
+% define packages used
+\usepackage{CV}
+
+\setlength{\tabcolsep}{0pt}
+\newcommand{\reitem}[2]{
+  \begin{tabular}[t]{l}
+    #2
+  \end{tabular}
+\hfill
+\begin{tabular}[t]{r}
+  #1
+\end{tabular}
+}
+
+
+\newcommand{\sidebyside}[2]{
+  %\fbox{
+  \begin{minipage}[t]{.75\textwidth}
+    \raggedright{}
+    #2
+  \end{minipage}
+  %}
+  %\hfill
+  %\fbox{
+  \hspace{.01\textwidth}
+    \begin{minipage}[t]{.205\textwidth}
+    \raggedleft
+    #1
+  \end{minipage}
+%}
+}
+
+\newcommand{\quadItem}[4]{\reitem{\emph{#1}\\#2}{\textbf{#3}\\#4}}
+\newcommand{\award}[3]{\textbf{#2}, #1\\#3}
+\newcommand{\paper}[3]{#1.\\#2 #3}
+\newcommand{\desc}[1]{\hspace*{.5em}#1}
+\newcommand{\trio}[3]{\sidebyside{#3}{\textbf{#1}. #2}}
+
+%***************************************************************************************************%
+% Header Section %
+%***************************************************************************************************%
+
 %% Header Information
 % name
-\def \name {Andrew Quinn}
-
+\title{curriculum vitae}
+\author{andrew quinn}
 % address
 \def \addr {4929 CSE\\2260 Hayward St.\\Ann Arbor, MI 48105}
 % phone number
@@ -19,106 +64,11 @@
 \def \website {\href{https://web.eecs.umich.edu/~arquinn}{web.eecs.umich.edu/$\sim$arquinn}}
 
 
-%***************************************************************************************************%
-% Header Section %
-%***************************************************************************************************%
-% define packages used
-\usepackage[empty]{fullpage}	
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{enumerate}
-\usepackage{enumitem}
-\usepackage{hyperref}
-\usepackage[explicit]{titlesec}
-\usepackage[dvipsnames, svgnames]{xcolor}
-\usepackage[margin=1in]{geometry}
-\usepackage{calc}
-\usepackage{pbox}
-\usepackage{verbatim}
-
-\hypersetup{
-  colorlinks=true
-  }
-\raggedbottom
-\raggedright
-
-\setlength{\parskip}{6pt}
-
-%\newcommand{\section}[1]{\vspace{6pt}{\normalsize\colorbox{mygrey}{\begin{minipage}{\textwidth}{\textsc{#1\vphantom{p\^{E}}}}\end{minipage}}}\vspace{6pt}}
-%\newcommand{\section}[1]{\vspace{6pt}{\normalsize {\textsc{#1}}} %\vspace{6pt}}
-%\newcommand{\section}[1]{{\normalsize {\textsc{#1}}}\hrulefill}
-
-%\titleformat{\section}{\large\bfseries}{}{0pt}{\textcolor{SteelBlue!80}{#1}\enspace \color{LightSteelBlue!50}\titlerule[1ex]}[]
-\titleformat{\section}{\large\scshape}{}{0pt}{#1}[{\titlerule[0.8pt]}]
-\titlespacing*{\section}{0pt}{6pt}{6pt}
-
-\newlength \firstcol
-\setlength{\firstcol}{\textwidth-4.5cm}%
-\setlength{\tabcolsep}{0pt}
-\newcommand{\reitem}[2]{
-  \begin{tabular}{l}
-    #2
-  \end{tabular}
-\hfill
-\begin{tabular}{r}
-  #1
-\end{tabular}
-}
-
-%\newcommand{\reitem}[2]{
-%  \begin{minipage}{\firstcol}
-%    #2
-%  \end{minipage}
-%\null\hfill
-%\begin{minipage}{4cm}
-%  \flushright #1
-%\end{minipage}
-%}
-
-
-
-\newcommand{\heading}[4]{
-\vspace{#1}
-\begin{minipage}{\firstcol}
-\flushleft
-\textbf{#2}
-\end{minipage}
-\null\hfill
-\begin{minipage}{3.6cm}
-\flushright
-\textit{#3}
-\end{minipage}
-\vspace{#4}
-}
-
-\newcommand{\tab}{\hspace*{1em}}
-\newcommand{\blkSquare}{\ \rule[.2ex]{1ex}{1ex}\ }
-
-
-\newcommand{\quadItem}[4]{\reitem{\emph{#1}\\#2}{\textbf{#3}\\#4}}
-\newcommand{\award}[4]{\reitem{#1\\#2}{\textbf{#3}\\#4}}
-%\newcommand{\quadItem}[4]{#1\\#2\\#3\\#4}
-%\newcommand{\quadItem}[2]{\reitem{#1}{\tab#2}}
-
-\newcommand{\paper}[3]{#1\\#2 #3}
-\newcommand{\desc}[1]{\hspace*{.5em}#1}
-
-\newcommand{\presentation}[3]{
-  \emph{#1}\\
-  \reitem{#3}{#2}
-  }
-
-%***************************************************************************************************%
-% Header Section %
-%***************************************************************************************************%
 \begin{document}
+\setlength\parindent{0pt}
+\setlength{\parskip}{3pt}
 
-% Declares the Title Command
-\begin{center}
-  \textbf{{\LARGE \name}} \\
-  Curriculum Vitae
-\end{center}
-
-%Address: \addr\\
+\maketitle
 \begin{tabular}{l}
   \addr
 \end{tabular}
@@ -129,8 +79,6 @@
   Web: \website
 \end{tabular}
 
-
-
 %\vspace{0.1in}}
 
 %***************************************************************************************************%
@@ -138,30 +86,27 @@
 %***************************************************************************************************%
 \section{Introduction}
 
-I am a computer science researcher interesting in software systems.
+I am a Microsoft Research Fellow and a National Science Foundation Graduate
+Research Fellow.
 
-My research proposes new tools, frameworks and algorithms to improve
-software reliability, focusing largely on improving our ability to
-debug software.  In my thesis, I build new cluster-scale systems to
-accelerate expensive dynamic program analyses such as dynamic
-information flow tracking and always-on program invariants.  I
-explored automated systems for debugging persistent memory
-applications and proposed a new software infrastructure for edge
-computing.
-
-I am a Microsoft Research Fellow and a National Science Foundation
-Graduate Research Fellow.
+My dissertation applies techniques from data-centric computing, such as
+large-scale parallelization and declarative languages, to software reliability
+tasks like debugging, security forensics, and data provenance.  I have advised
+students on projects that improve the reliability of applications that use
+emerging hardware, including persistent memory and edge computing.
 
 %***************************************************************************************************%
 % Education Section %
 %***************************************************************************************************%
 \section{Education}
 
-\quadItem{Ann Arbor, MI}{Sep 2015 - Present}{University of Michigan}{Ph.D., Computer Science and Engineering}
+\quadItem{Ann Arbor, MI}{(Sep 2015--May 2021 (expected))}{University of
+  Michigan}{Ph.D., Computer Science and Engineering}
 
-\quadItem{Ann Arbor, MI}{Sep 2015 - May 2015}{University of Michigan}{M.S., Computer Science and Engineering}
+\quadItem{Ann Arbor, MI}{(Sep 2015--May 2015)}{University of Michigan}{M.S.,
+  Computer Science and Engineering}
 
-\quadItem{Granville, OH}{Aug 2010 - May 2014}{Denison University}{B.S.,
+\quadItem{Granville, OH}{(Aug 2010--May 2014)}{Denison University}{B.S.,
   Computer Science and B.A., Mathematics\\ Honors: \textit{summa cum
     laude}, Phi Beta Kappa, Deans List}
 
@@ -170,135 +115,131 @@ Graduate Research Fellow.
 % Honors Section %
 %***************************************************************************************************%
 \section{Fellowships and Awards}
-%\begin{comment}
+\begin{smenumerate}
+\item \trio{Microsoft Research Fellowship}{Two year fellowship awarded to
+  nine early-career Ph.D. students}{(2017)}
 
-\award{2017}{}{Microsoft Research Fellowship}{Two year fellowship awarded to nine early-career Ph.D. students}
+\item \trio{National Science Foundation Graduate Student Research
+  Fellowship}{Three year fellowship awarded to early-career
+  Ph.D. students}{(2017)}
 
-\award{2017}{}{National Science Foundation Graduate Student Research Fellowship}{Three year fellowship awarded to Ph.D. students}
+\item \trio{John L. Gilpatrick Mathematics Award, Denison University}{Awarded to
+  the most outstanding senior major in the Math and CS department}{(2014)}
 
-\award{2014}{}{John L. Gilpatrick Mathematics Award, Denison University}{Awarded to the most outstanding senior major in the Math and CS department}
-
-\award{2014}{}{Ted Barclay Top Five Student Athlete, Denison University}{Awarded to the top five student athletes at Denison based on GPA.}
-
-%\award{2017}{Microsoft Research Fellowship}\\
-%\desc{Two year fellowship awarded to nine early-career Ph.D. students}\\
-%\award{2017}{National Science Foundation Graduate Student Research Fellowship}\\
-%\desc{Three year fellowship awarded }\\
-%\award{2014}
-%\award{2014}{Ted Barclay Top Five Student Athlete, Denison University}\\
-%\desc{Awarded to the top five student athletes at Denison based on GPA.}
-%\end{comment}
-
+\item \trio{Ted Barclay Top Five Student Athlete, Denison University}{Awarded to
+  the top five student athletes at Denison University based on GPA.}{(2014)}
+\end{smenumerate}
 %**************************************************************************************************
 % Publications
 %***************************************************************************************************
-\section{Conference Publications}
-%\begin{comment}
-\paper{Ian Neal, Ben Reeves, Ben Stoler, \textbf{Andrew Quinn},
-  Youngjin Kwon, Simon Peter and Baris Kasikci}{\emph{Agamotto: How
-    Persistent is your Persistent Memory Application?}.  To appear in
-  Proceedings of the 2020 USENIX Symposium on Operating Systems Design
-  and Implementation (OSDI).  November 2020.}{Acceptance Rate: $70/398=17.6\%$}
+\section{Peer-reviewed Publications}
+\begin{smenumerate}
+\item \paper{Ian Neal, Ben Reeves, Ben Stoler, \textbf{Andrew Quinn}, Youngjin Kwon,
+  Simon Peter and Baris Kasikci}{\emph{Agamotto: How Persistent is your
+    Persistent Memory Application?}.  In Proceedings of the 2020 USENIX
+  Symposium on Operating Systems Design and Implementation (OSDI).  November
+  2020.}{Acceptance Rate: $70/398=17.6\%$}
 
-\paper{\textbf{Andrew Quinn}, Jason Flinn, and Michael Cafarella}{
-  \emph{Sledgehammer: Cluster-fueled Debugging}.  In Proceedings of
-  the 2018 USENIX Symposium on Operating Systems Design and
-  Implementation (OSDI).  October 2018.}{Acceptance Rate: $47/264 = 17.8\%$}
-
-\paper{\textbf{Andrew Quinn}, David Devecsery, Peter M. Chen and Jason
-  Flinn}{\emph{JetStream: Cluster-scale Parallelization of Information
-  Flow Queries}.  In Proceedings of the 2016 USENIX Symposium on
-    Operating Systems Design and Implementation (OSDI). November
-  2016.}{Acceptance Rate: $47/267=17.6\%$}
-%\end{comment}
-%**************************************************************************************************
-% Publications
-%***************************************************************************************************
-\section{Workshop Publications}
-%\begin{comment}
-\paper{Matt Furlong, \textbf{Andrew Quinn}, and Jason Flinn}
+\item \paper{Matt Furlong, \textbf{Andrew Quinn}, and Jason Flinn}
       {\emph{The case for Determinism on the Edge}.  In 2nd USENIX
         Workshop on Hot Topics in Edge Computing (HotEdge).  July
         2019}{Acceptance Rate: $22/39=56\%$}
 
-\paper{\textbf{Andrew Quinn}, Michael Cafarella, and Jason
+\item \paper{\textbf{Andrew Quinn}, Michael Cafarella, and Jason
   Flinn}{\emph{You can't debug what you can't see: Expanding
     observability with the OmniTable}. In Proceedings of the Workshop
   on Hot Topics in Operating Systems (HotOS).  May 2019}{Acceptance
   Rate: $30/125=24\%$}
-%\end{comment}
+
+\item \paper{\textbf{Andrew Quinn}, Jason Flinn, and Michael Cafarella}{
+  \emph{Sledgehammer: Cluster-fueled Debugging}.  In Proceedings of the 2018
+  USENIX Symposium on Operating Systems Design and Implementation (OSDI).
+  October 2018.}{Acceptance Rate: $47/264 = 17.8\%$}
+
+\item \paper{\textbf{Andrew Quinn}, David Devecsery, Peter M. Chen and Jason
+  Flinn}{\emph{JetStream: Cluster-scale Parallelization of Information
+  Flow Queries}.  In Proceedings of the 2016 USENIX Symposium on
+    Operating Systems Design and Implementation (OSDI). November
+  2016.}{Acceptance Rate: $47/267=17.6\%$}
+\end{smenumerate}
 
 %**************************************************************************************************
 % Presentations
 %***************************************************************************************************
 \section{Presentations}
-%\begin{comment}
-\quadItem{May 2019}{}{You can't debug what you can't see: Expanding
-  Observability with the OmniTable}{Workshop on Hot Topics in
-  Operating Systems (HotOS)}
+\begin{smenumerate}
+\item\trio{You can't debug what you can't see: Expanding Observability with the
+  OmniTable}{Workshop on Hot Topics in Operating Systems (HotOS)}{(May 2019)}
 
-\quadItem{Oct 2018}{}{Sledgehammer: Cluster-fueled Debugging}{USENIX Symposium
-  on Operating Systems Design and Implementation (OSDI)}
+\item\trio{Sledgehammer: Cluster-fueled Debugging}{USENIX Symposium on Operating
+  Systems Design and Implementation (OSDI)}{(Oct 2018)}
 
-\quadItem{Nov 2016}{}{JetStream: Cluster-Scale Parallelization of Information
-  Flow Queries}{USENIX Symposium on Operating Systems Design and
-  Implementation (OSDI)}
+\item\trio{JetStream: Cluster-Scale Parallelization of Information Flow
+  Queries}{USENIX Symposium on Operating Systems Design and Implementation
+  (OSDI)}{(Nov 2016)}
 
-\quadItem{Apr 2014}{}{Power Management for Malleable Job Scheduling}{Denison
-  University department of Math and Computer Science FaST talk}
-%\end{comment}
+\item\trio{Power Management for Malleable Job Scheduling}{Denison University
+  department of Math and Computer Science FaST talk}{(Apr 2014)}
+\end{smenumerate}
 
 %**************************************************************************************************
 % Teaching
 %***************************************************************************************************
 \section{Teaching Experience}
-%\begin{comment}
-\quadItem{Ann Arbor, MI}{May 2019 - Jun 2019}{University of Michigan}{Graduate Student Instructor for Data Structures and Algorithms}
+\begin{smenumerate}
+\item\trio{Graduate Student Instructor}{Data Structures and Algorithms,
+  University of Michigan, Ann Arbor, MI}{(May 2019--Jun 2019)}
 
-\quadItem{Granville, OH}{Jan 2012 - May 2014}{Denison University}{Computer Science Tutor for Introduction to Computer Science}
-%\end{comment}
+\item\trio{Computer Science Drop-in Tutor}{Introduction to Computer Science,
+  Denison Univeristy, Granville, OH}{(Jan 2012--May 2014)}
+\end{smenumerate}
 
 %**************************************************************************************************
 % Professional Service
 %***************************************************************************************************
 \section{Professional Service}
-%\begin{comment}
-\quadItem{}{2021}{External Review Committee Member}{Architectural Support for Programming Languages and Operating Systems (ASPLOS)}
+\begin{smenumerate}
+\item\trio{External Review Committee Member}{Architectural Support for
+  Programming Languages and Operating Systems (ASPLOS)}{(2021)}
 
-\quadItem{}{2020}{Conference Shadow Program Committee Member}{European Conference on Computer Systems (EuroSys)}
+\item\trio{Shadow Program Committee Member}{European Conference on Computer
+  Systems (EuroSys)}{(2021)}
 
-\quadItem{}{2018}{Ph.D. Admissions Committee Member}{University of Michigan Department of Computer Science and Engineering}
-%\end{comment}
+\item\trio{Ph.D. Admissions Committee Member}{University of Michigan Department
+  of Computer Science and Engineering}{(2018)}
+\end{smenumerate}
 
 
 %**************************************************************************************************
 % Experience
 %***************************************************************************************************
 \section{Professional Experience}
-%\begin{comment}
-\quadItem{Ann Arbor, MI}{Sep 2015 - Present}{University of Michigan}{Graduate Student advised by Dr. Jason Flinn and Dr. Peter Chen}
+\begin{smenumerate}
+\item\trio{Graduate Student}{Advisor: Dr.\ Jason Flinn and Dr.\ Peter Chen,
+  University of Michigan, Ann Arbor, MI}{(Sep 2015--Present)}
 
-\quadItem{Redmond, WA}{May 2017 - Aug 2017}{Microsoft Corp.}{Research Intern mentored by Dr. Suman Nath}
+\item\trio{Research Intern in the Systems Group}{Mentor: Dr.\ Suman Nath,
+  Microsoft Corp., Redmond, WA}{(May 2017--Aug 2017)}
 
-\quadItem{Dublin, OH}{Jun 2014 - Aug 2015}{International Business Machines (IBM)} {Software Development Engineer}
+\item\trio{Software Development Engineer}{International Business Machines (IBM),
+  Dublin, OH}{(Jun 2014--Aug 2015)}
 
-\quadItem{Granville, OH}{Aug 2013 - May 2014}{Denison University} {Research assistant mentored by Dr. Jessen Havill}
+\item\trio{Research Assistant in Online Algorithms}{Mentor: Dr.\ Jessen Havill,
+  Denison University, Granville, OH}{(Aug 2013--May 2014)\\(May 2012--Aug 2012)}
 
-\quadItem{Dublin, OH}{May 2013 - Aug 2013}{International Business Machines (IBM)} {Software Development Engineering Intern}
+\item\trio{Software Development Engineering Intern}{International Business
+  Machines (IBM), Dublin, OH}{(May 2013--Aug 2013)}
 
-\quadItem{Granville, OH}{May 2012 - Aug 2012}{Denison University} {Research assistant mentored by Dr. Jessen Havill}
-%\end{comment}
+\end{smenumerate}
 
 %***************************************************************************************************
 % Outreach
 %***************************************************************************************************%
 \section{Outreach Activities}
-%\begin{comment}
-\reitem{Aug 2019}{Discover Engineering, University of Michigan, Ann Arbor, MI}
-
-\reitem{Aug 2014 - Aug 2015}{Techie Club, Georgian Heights Elementary, Columbus, OH}
-
-\reitem{Sep 2012 - Dec 2013}{A Call to College, Newark Elementary Schools, Newark, OH}
-%\end{comment}
+\begin{smenumerate}
+\item\trio{Discover Engineering}{University of Michigan, Ann Arbor, MI}{(Aug 2019)}
+\item\trio{Techie Club}{Georgian Heights Elementary, Columbus, OH}{(Aug 2014--Aug 2015)}
+\item\trio{A Call to College}{Newark Elementary Schools, Newark, OH}{(Sep 2012--Dec 2013)}
+\end{smenumerate}
 \end{document}
 
