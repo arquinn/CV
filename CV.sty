@@ -4,24 +4,22 @@
 \usepackage{enumerate}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
+\usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage[explicit]{titlesec}
 \usepackage[margin=1in]{geometry}
 \usepackage{calc}
 \usepackage{xspace}
+\usepackage{xcolor}
 \usepackage{indentfirst}
 
 
 \makeatletter
-\def\@maketitle{%
-%  \newpage
-%  \null
-  %\vskip 2em%
-  \begin{center}%
+\def\@maketitle{
+  \begin{center}
     {\huge \lowercase{\textsc{\@title}}}\vskip 3pt
     {\Large \lowercase{\textsc{\@author}}}
-       %\vskip 1.5em%
-  \end{center}%
+  \end{center}
   \par
   }
 \makeatother
@@ -43,7 +41,8 @@
 
 %setup some standard lengths
 \hypersetup{
-  colorlinks=true
+  colorlinks=true,
+  urlcolor=gray
   }
 \raggedbottom
 
