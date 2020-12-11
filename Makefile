@@ -3,7 +3,7 @@ TEX = $(wildcard *.tex)
 
 .PHONY: all clean
 
-all: CV.pdf
+all: CV.pdf Publication_List.pdf
 
 %.pdf: %.tex
 	echo $(TEX)
