@@ -56,15 +56,15 @@
 
 %% Header Information
 % name
-\title{curriculum vitae}
-\author{andrew quinn}
+\title{andrew quinn}
+\author{Assistant Professor\\Computer Science \& Engineering\\ University of California, Santa Cruz}
 % address
-\def \addr {2260 Hayward Street\\Ann Arbor, MI 48105}
+\def \addr {Office \#365, Engineering \#2\\1156 High Street\\Santa Cruz, CA 95064}
 % phone number
 \def \phone {1.630.453.1899}
 % email
-\def \email {\href{mailto:arquinn@umich.edu}{arquinn@umich.edu}}
-\def \website {\href{https://web.eecs.umich.edu/~arquinn}{web.eecs.umich.edu/$\sim$arquinn}}
+\def \email {\href{mailto:aquinn1@ucsc.edu}{aquinn1@ucsc.edu}}
+\def \website {\href{https://arquinn.github.io}{arquinn.github.io}}
 
 
 \begin{document}
@@ -88,25 +88,23 @@
 %***************************************************************************************************%
 % Introduction Section %
 %***************************************************************************************************%
-\section{Introduction}
-
-I am a Microsoft Research Fellow and a National Science Foundation Graduate
-Research Fellow.
-
-My dissertation applies techniques from data-intensive computing (i.e.,
-`big-data'), such as large-scale parallelization and relational query models, to
-software reliability tasks like debugging, security forensics, and data
-provenance.  I have also worked on projects to improve the reliability of
-applications that use emerging hardware, including persistent memory and edge
-computing.
+\section{Research Interests}
+My research aims to make it easier for developers to build correct and
+efficient software systems.  I propose techniques and systems that
+change the way developers debug their software, build tools that
+automatically find bugs, and perform taxonomies of the bugs we see in
+software that use emerging hardware platforms.  My work builds on
+insights from across systems, programming languages, software
+engineering, and computer architecture.
 
 %***************************************************************************************************%
 % Education Section %
 %***************************************************************************************************%
 \section{Education}
 
-\quadItem{Ann Arbor, MI}{(Sep 2015--May 2021 (expected))}{University of
-  Michigan}{Ph.D., Computer Science and Engineering}
+\quadItem{Ann Arbor, MI}{(Sep 2015--Dec 2021)}{University of
+  Michigan}{Ph.D., Computer Science and Engineering\\Thesis:
+  Data-Centric Execution Inspection}
 
 \quadItem{Ann Arbor, MI}{(Sep 2015--May 2017)}{University of Michigan}{M.S.,
   Computer Science and Engineering}
@@ -119,71 +117,88 @@ computing.
 %***************************************************************************************************%
 % Honors Section %
 %***************************************************************************************************%
-\section{Fellowships and Awards}
+\section{Awards}
 \begin{smenumerate}
+\item \trio{IEEE Micro Top Pick Honorable Mention}{``Agamotto''}{(2021)}
+\item \trio{OSDI Student Travel Grant}{}{(2018)}
+\item \trio{SOSP Student Travel Grant}{}{(2017)}
+\item \trio{OSDI Student Travel Grant}{}{(2016)}
+\item \trio{John L. Gilpatrick Mathematics Award, Denison University}{Awarded to
+  the most outstanding senior major in the Math and CS department}{(2014)}
+\item \trio{Ted Barclay Top Five Student Athlete, Denison University}{Awarded to
+  the top five student athletes at Denison University based on GPA.}{(2014)}
+\end{smenumerate}
+
+\section{Funding}
+\begin{smenumerate}
+\item \trio{Google Gift}{Co-author of an awarded proposal entitled
+  ``Towards Fuzzing for Production Bugs''}{(2021)}
 \item \trio{Microsoft Research Fellowship}{Two year fellowship awarded to
   nine early-career Ph.D. students}{(2017)}
-
 \item \trio{National Science Foundation Graduate Student Research
   Fellowship}{Three year fellowship awarded to early-career
   Ph.D. students}{(2017)}
-
-\item \trio{John L. Gilpatrick Mathematics Award, Denison University}{Awarded to
-  the most outstanding senior major in the Math and CS department}{(2014)}
-
-\item \trio{Ted Barclay Top Five Student Athlete, Denison University}{Awarded to
-  the top five student athletes at Denison University based on GPA.}{(2014)}
 \end{smenumerate}
 %**************************************************************************************************
 % Publications
 %***************************************************************************************************
 \section{Peer-reviewed Publications}
 \begin{smenumerate}
-  \item \paper{Gefei Zuo, Jiacheng Ma, \textbf{Andrew Quinn}, Pramod Bhatotia,
-    Pedro Fonseca, and Baris Kasikci}{\emph{Reproducing Production Failures with
-      Execution Reconstruction}. To appear in Proceedings of the
-    42\textsuperscript{nd} ACM SIGPLAN Conference on Programming Language
-    Design and Implementation. June 2021.}{Acceptance Rate: $87/320=27.2\%$}
+    \item \paper{Jiacheng Ma, Gefei Zuo, Kevin Loughlin, Haoyang
+      Zhang, \textbf{Andrew Quinn}, and Baris Kasikci}{\emph{Debugging
+      in the Brave New World of Reconfigurable Hardware}. To appear in
+      Proceedings of the Twenty-Seventh International Conference on
+      Architectural Support for Programming Languages and Operating
+      Systems (ASPLOS). February 2022.}{Acceptance Rate:
+      $80/397=20.1\%$}
+
+  \item \paper{Gefei Zuo, Jiacheng Ma, \textbf{Andrew Quinn}, Pramod
+    Bhatotia, Pedro Fonseca, and Baris Kasikci}{\emph{Reproducing
+    Production Failures with Execution Reconstruction}. In Proceedings
+    of the 42\textsuperscript{nd} ACM SIGPLAN Conference on
+    Programming Language Design and Implementation. June
+    2021.}{Acceptance Rate: $87/320=27.2\%$}
 
   \item \paper{Ian Neal, \textbf{Andrew Quinn}, and Baris
-    Kasikci}{\emph{Hippocrates: Healing Persistent Memory Bugs Without Doing Any
-      Harm}. To appear in the Proceedings of the Twenty-Sixth International
-    Conference on Architectural Support for Programming Languages and Operating
-    Systems (ASPLOS). April 2021.}{Acceptance Rate: $75/398=18.8\%$}
+    Kasikci}{\emph{Hippocrates: Healing Persistent Memory Bugs Without
+    Doing Any Harm}. In the Proceedings of the Twenty-Sixth
+    International Conference on Architectural Support for Programming
+    Languages and Operating Systems (ASPLOS). April 2021.}{Acceptance
+    Rate: $75/398=18.8\%$}
     
-\item \paper{Ian Neal, Ben Reeves, Ben Stoler, \textbf{Andrew Quinn}, Youngjin Kwon,
-  Simon Peter and Baris Kasikci}{\emph{Agamotto: How Persistent is your
+  \item \paper{Ian Neal, Ben Reeves, Ben Stoler, \textbf{Andrew Quinn}, Youngjin Kwon,
+    Simon Peter and Baris Kasikci}{\emph{Agamotto: How Persistent is your
     Persistent Memory Application?}.  In Proceedings of the 2020 USENIX
-  Symposium on Operating Systems Design and Implementation (OSDI).  November
-  2020.}{Acceptance Rate: $70/398=17.6\%$}
+    Symposium on Operating Systems Design and Implementation (OSDI).  November
+    2020.}{Acceptance Rate: $70/398=17.6\%$}
 
-\item \paper{Matt Furlong, \textbf{Andrew Quinn}, and Jason Flinn}
-      {\emph{The case for Determinism on the Edge}.  In 2nd USENIX
-        Workshop on Hot Topics in Edge Computing (HotEdge).  July
-        2019.}{Acceptance Rate: $22/39=56\%$}
+  \item \paper{Matt Furlong, \textbf{Andrew Quinn}, and Jason Flinn}
+    {\emph{The case for Determinism on the Edge}.  In 2nd USENIX
+      Workshop on Hot Topics in Edge Computing (HotEdge).  July
+      2019.}{Acceptance Rate: $22/39=56\%$}
 
-\item \paper{\textbf{Andrew Quinn}, Michael Cafarella, and Jason
-  Flinn}{\emph{You can't debug what you can't see: Expanding
+  \item \paper{\textbf{Andrew Quinn}, Michael Cafarella, and Jason
+    Flinn}{\emph{You can't debug what you can't see: Expanding
     observability with the OmniTable}. In Proceedings of the Workshop
-  on Hot Topics in Operating Systems (HotOS).  May 2019.}{Acceptance
-  Rate: $30/125=24\%$}
+    on Hot Topics in Operating Systems (HotOS).  May 2019.}{Acceptance
+    Rate: $30/125=24\%$}
 
-\item \paper{\textbf{Andrew Quinn}, Jason Flinn, and Michael Cafarella}{
-  \emph{Sledgehammer: Cluster-fueled Debugging}.  In Proceedings of the 2018
-  USENIX Symposium on Operating Systems Design and Implementation (OSDI).
-  October 2018.}{Acceptance Rate: $47/264 = 17.8\%$}
+  \item \paper{\textbf{Andrew Quinn}, Jason Flinn, and Michael Cafarella}{
+    \emph{Sledgehammer: Cluster-fueled Debugging}.  In Proceedings of the 2018
+    USENIX Symposium on Operating Systems Design and Implementation (OSDI).
+    October 2018.}{Acceptance Rate: $47/264 = 17.8\%$}
 
-\item \paper{\textbf{Andrew Quinn}, David Devecsery, Peter M. Chen and Jason
-  Flinn}{\emph{JetStream: Cluster-scale Parallelization of Information
-  Flow Queries}.  In Proceedings of the 2016 USENIX Symposium on
+  \item \paper{\textbf{Andrew Quinn}, David Devecsery, Peter M. Chen and Jason
+    Flinn}{\emph{JetStream: Cluster-scale Parallelization of Information
+    Flow Queries}.  In Proceedings of the 2016 USENIX Symposium on
     Operating Systems Design and Implementation (OSDI). November
-  2016.}{Acceptance Rate: $47/267=17.6\%$}
+    2016.}{Acceptance Rate: $47/267=17.6\%$}
 \end{smenumerate}
 
 %**************************************************************************************************
 % Presentations
 %***************************************************************************************************
-\section{Presentations}
+\section{Talks}
 \begin{smenumerate}
 \item\trio{You can't debug what you can't see: Expanding Observability with the
   OmniTable}{Workshop on Hot Topics in Operating Systems (HotOS)}{(May 2019)}
@@ -199,31 +214,47 @@ computing.
   department of Math and Computer Science FaST talk}{(Apr 2014)}
 \end{smenumerate}
 
-%**************************************************************************************************
-% Teaching
-%***************************************************************************************************
-\section{Teaching Experience}
-\begin{smenumerate}
-\item\trio{Graduate Student Instructor}{Data Structures and Algorithms,
-  University of Michigan, Ann Arbor, MI}{(May 2019--Jun 2019)}
-
-\item\trio{Computer Science Drop-in Tutor}{Introduction to Computer Science,
-  Denison University, Granville, OH}{(Jan 2012--May 2014)}
-\end{smenumerate}
 
 %**************************************************************************************************
 % Professional Service
 %***************************************************************************************************
-\section{Professional Service}
+\section{Service}
+\subsection{Professional}
 \begin{smenumerate}
+\item\trio{Mentorship chair}{Symposium on Operating Systems Principles}{(2021)}
+\item\trio{AMA Moderator}{Symposium on Operating Systems Principles}{(2021)}
 \item\trio{External Review Committee Member}{Architectural Support for
   Programming Languages and Operating Systems (ASPLOS)}{(2021)}
+\end{smenumerate}
 
-\item\trio{Shadow Program Committee Member}{European Conference on Computer
-  Systems (EuroSys)}{(2021)}
+%***************************************************************************************************
+% Outreach
+%***************************************************************************************************%
+\subsection{Outreach}
+\begin{smenumerate}
+\item\trio{Discover Engineering}{University of Michigan, Ann Arbor, MI}{(Aug 2019)}
+\item\trio{Techie Club}{Georgian Heights Elementary, Columbus, OH}{(Aug 2014--Aug 2015)}
+\item\trio{A Call to College}{Newark Elementary Schools, Newark, OH}{(Sep 2012--Dec 2013)}
+\end{smenumerate}
 
-\item\trio{Ph.D. Admissions Committee Member}{University of Michigan Department
-  of Computer Science and Engineering}{(2018)}
+
+%**************************************************************************************************
+% Teaching
+%***************************************************************************************************
+
+\section{Teaching}
+\subsection{UC Santa Cruz}
+\begin{smenumerate}
+  \item CSE 231 -- Advanced Operating Systems
+  
+\end{smenumerate}
+
+\subsection{Before UC Santa Cruz}
+\begin{smenumerate}
+\item\trio{Graduate Student Instructor}{Data Structures and Algorithms,
+  University of Michigan, Ann Arbor, MI}{(Summer 2019)}
+\item\trio{Computer Science Drop-in Tutor}{Introduction to Computer Science,
+  Denison University, Granville, OH}{(Spring 2012--Spring 2014)}
 \end{smenumerate}
 
 
@@ -249,14 +280,5 @@ computing.
 
 \end{smenumerate}
 
-%***************************************************************************************************
-% Outreach
-%***************************************************************************************************%
-\section{Outreach Activities}
-\begin{smenumerate}
-\item\trio{Discover Engineering}{University of Michigan, Ann Arbor, MI}{(Aug 2019)}
-\item\trio{Techie Club}{Georgian Heights Elementary, Columbus, OH}{(Aug 2014--Aug 2015)}
-\item\trio{A Call to College}{Newark Elementary Schools, Newark, OH}{(Sep 2012--Dec 2013)}
-\end{smenumerate}
 \end{document}
 
