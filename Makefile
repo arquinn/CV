@@ -3,7 +3,10 @@ TEX = $(wildcard *.tex)
 
 .PHONY: all clean
 
-all: CV.pdf Publication_List.pdf
+all: Andrew_Quinn_CV.pdf 
+
+Andrew_Quinn_CV.pdf: CV.pdf
+	mv $^ $@
 
 %.pdf: %.tex
 	echo $(TEX)
